@@ -1,0 +1,82 @@
+@use "common";
+@use "header";
+@use "footer";
+@use "cart";
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    &__item {
+        padding: 0.75rem;
+        display: grid;
+        grid-template: 
+        "title title" 30px
+        "image content" 1fr
+        "image buyNow" 46px / 1fr 1fr; 
+        align-items: center;
+
+        > span {
+            display: none;
+            grid-area: price;
+        }
+    
+        > h2 {
+            grid-area: title;
+        }
+    
+        > img {
+            grid-area: image;
+            width: 100%;
+        }
+    
+        > p {
+            grid-area: content;
+            background-color: #EBECEC;
+        }
+    
+        > button {
+            grid-area: buyNow;
+        }
+
+        @media screen and (min-width: 768px) {
+            grid-template: 
+            "title title"
+            "image content"
+            "buyNow buyNow";
+        }
+
+        @media screen and (min-width: 1024px) {
+            grid-template: 
+                "title title"
+                "image image"
+                "content content"
+                "price buyNow";
+
+            > span {
+                display: block;
+            }
+        }
+    }
+}
+
+aside{
+    align-items: center;
+    padding-top: 2rem;
+
+    .selected-menu{
+        color: #A81444;
+    }
+}
+
+aside > a {
+    padding-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #404040;
+    padding-top: 1rem;
+
+    &:hover, &:active{
+        color: #A81444;
+    }
+}

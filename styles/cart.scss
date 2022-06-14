@@ -1,0 +1,137 @@
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-body {
+    background-color: #eeeeee;
+    margin: 10% 50%; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+    min-height: 44rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    .modal-body {
+        background-color: #eeeeee;
+        border: 1px solid #888;
+        min-height: 44rem;
+        width: 100% !important;
+        margin: 0 !important;
+      }
+    }
+  /* The Close Button */
+  .close {
+    color: #fff;
+    float: right;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .modal-header{
+    color: #fff;
+    padding: 1.2rem;
+    background-color: #1d2124;
+  }
+
+  .modal-content > div:last-child{
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      background-color: #fff;
+      margin: 3%;
+      padding: 2%;
+
+      img{
+          width: 30%;
+      }
+
+  }
+
+  .btn-flex {
+      display: flex;
+      align-items: center;
+
+      span:last-child{
+        margin-left: 11rem;  
+      }
+  }
+
+  .footer{
+      padding: 0.5rem;
+      background-color: #fff;
+  }
+
+  .modal-body > div:last-child{
+      margin-top: 1rem;
+      
+
+      p{
+          text-align: center;
+      }
+
+      button{
+          width: 100%;
+      }
+  }
+
+  .modal-content{
+      min-height: 40rem;       
+    > div{      
+        > div{
+            display: flex; 
+            gap: 1rem; 
+            > img{
+                width: 20%;
+            }
+            > div {
+                width: 65%;
+                align-items: baseline;
+            }
+            > div > p:first-child{
+                font-weight: 600;
+            }
+        }
+    }
+
+    .cart_items{
+        margin-bottom: 1rem;  
+        background-color: #fff;
+        padding-left: 1rem;
+
+        > p{
+            display: flex;
+            align-items: flex-end;
+            padding-right: 1rem;
+        }
+
+        > div > p > span{
+            cursor: pointer;
+            background-color: #A81444;
+            color: #fff;
+            border-radius: 50%;
+            padding-left: 3px !important;
+            margin-right: 1rem;
+            margin-left: 1rem;
+            padding: 0.1rem;
+        }
+    }
+
+  }
+

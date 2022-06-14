@@ -1,0 +1,63 @@
+@use "header";
+@use "form";
+
+footer {
+    background-color: #EBECEC;
+    height: 46px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.container {
+    max-width: 1024px;
+    padding: 0 10px;
+}
+
+.container img {
+    height: 80px;
+}
+
+.container > nav {
+    /* flex-grow: 1; */
+    flex: 1;
+}
+
+.container > section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.container > section > button {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.container > section > button svg {
+    height: 24px;
+    width: 24px;
+}
+
+main{
+    display: flex;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+    align-items: center;
+}
+
+main > div,
+main > form{
+    flex: 1;
+}
+
+
+.btn__full{
+    height: 46px;
+    border: none;
+    background-color: #A81444;
+    color: #fff;
+    padding: 0 1rem;
+    width: 100%;
+}
